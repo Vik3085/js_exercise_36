@@ -1,11 +1,10 @@
 class Person {
-
-  static fromObject(obj) {
-    console.log(obj instanceof Person);
-  }
   constructor(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
+  }
+  static fromObject = (obj) => {
+    return new Person(obj.firstName, obj.lastName);
   }
 }
 
